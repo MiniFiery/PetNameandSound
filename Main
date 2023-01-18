@@ -1,0 +1,45 @@
+public class Main {
+    public static void main(String[] args) {
+        Bird b = new Bird("The Bird","Jib..Jib");
+        Dog d = new Dog("The Dog","Woof..Woof");
+        Cat c = new Cat("The Cat","Meow..Meow");
+        Pet petArray[] = {b,d,c};
+        for (int i=0; i<petArray.length; i++) {
+            System.out.print("Our animal " + petArray[i].getName() + " Sound is " +
+                    petArray[i].getSound()+ ".\n");
+        }
+    }
+}
+
+public class Pet {
+    public String name;
+    public String sound;
+    public Pet(String Name,String Sound) {
+        name = Name;
+        sound = Sound;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getSound() {
+        return sound;
+    }
+}
+
+public class Bird extends Pet {
+    Bird(String Name,String Sound) {
+        super(Name,Sound);
+    }
+}
+
+public class Dog extends Pet {
+    Dog(String Name,String Sound) {
+        super(Name,Sound);
+    }
+}
+
+public class Cat extends Pet {
+    Cat(String Name,String Sound) {
+        super(Name,Sound);
+    }
+}
